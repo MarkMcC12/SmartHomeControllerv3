@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -53,6 +54,14 @@ namespace SmartHomeController
             {
                 Console.WriteLine($"{DeviceName} is not currently recording.");
             }
-        }     
+        }
+
+            public override void getStatus()
+        {
+            base.getStatus();
+            Console.WriteLine("this is a smart camera");
+            Console.WriteLine($"Resolution: {Resolution}");
+        }
+    }     
     }
-}
+
